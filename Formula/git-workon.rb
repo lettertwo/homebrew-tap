@@ -1,5 +1,5 @@
 class GitWorkon < Formula
-  desc "A git plugin for managing worktrees"
+  desc "Git plugin for managing worktrees"
   homepage "https://github.com/lettertwo/git-workon"
   version "0.1.1"
   if OS.mac?
