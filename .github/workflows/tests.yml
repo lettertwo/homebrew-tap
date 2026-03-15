@@ -35,7 +35,9 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - run: brew test-bot --only-tap-syntax --skip-stable-version-audit
+      - run: brew style lettertwo/tap
+      - run: brew readall --aliases --os=all --arch=all lettertwo/tap
+      - run: brew audit --except=installed --except=version --tap=lettertwo/tap
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
 
