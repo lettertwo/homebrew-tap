@@ -10,7 +10,7 @@ jobs:
   test-bot:
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-15-intel, macos-26]
+        os: [ubuntu-24.04, macos-15-intel, macos-26]
     runs-on: ${{ matrix.os }}
     permissions:
       actions: read
@@ -30,6 +30,10 @@ jobs:
           path: ${{ steps.set-up-homebrew.outputs.gems-path }}
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
+
+      - name: Install Bubblewrap (Linux sandbox dependency)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y bubblewrap
 
       - run: brew test-bot --only-cleanup-before
 
