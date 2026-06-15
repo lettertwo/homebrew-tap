@@ -1,25 +1,25 @@
 class GitWorkon < Formula
   desc "Git plugin for managing worktrees"
   homepage "https://github.com/lettertwo/git-workon"
-  version "0.7.0"
+  version "0.7.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.0/git-workon-aarch64-apple-darwin.tar.xz"
-      sha256 "56618b2df088a4e8fca849355afda97b6a2817a12a1456f9f90cdfee7480126c"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.1/git-workon-aarch64-apple-darwin.tar.xz"
+      sha256 "ef537b19e978c5365318ebe85fef2c50d5c377fb8561016b214f997586d47ef9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.0/git-workon-x86_64-apple-darwin.tar.xz"
-      sha256 "2a0cb5e8e3d8a28ec193b04ed38cf9efbf12a2e824fdbf603e7bf070767bb864"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.1/git-workon-x86_64-apple-darwin.tar.xz"
+      sha256 "54e9ecf4f21f3ce3bf6a5b07b31aecf63622b5e03a0d3125a33a300d042cdc51"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.0/git-workon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f6d273e1cd3c73660b76c2fe18055384a9fcd1ce81f9a54df3ca2b0f05dfdf26"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.1/git-workon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "73df9a29279767fb803336887e7a862f02e4d8be0eef233438cb5c66979adb56"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.0/git-workon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d4738115643e38c638ae705ccdcbf1d68eb3e202addc9ef00e9831cba511939e"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.7.1/git-workon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f3dc56e6ac404d905c4b278cd6216525e5e39a74ac4f3b7b09366fcc24bc5c87"
     end
   end
   license "MIT"
