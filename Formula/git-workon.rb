@@ -1,25 +1,25 @@
 class GitWorkon < Formula
   desc "Git plugin for managing worktrees"
   homepage "https://github.com/lettertwo/git-workon"
-  version "0.11.0"
+  version "0.11.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.0/git-workon-aarch64-apple-darwin.tar.xz"
-      sha256 "fe636509507c9bc02ef6c2b48f18d8023848f3d02034da4dd210d326ae793192"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-aarch64-apple-darwin.tar.xz"
+      sha256 "0e2c526f533f9c07ef6bf8341ccfd70dba3f0371cf3a3b5b8ad0a649ff69d6de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.0/git-workon-x86_64-apple-darwin.tar.xz"
-      sha256 "a3b2c35afc3738c1c892dc503defe472a4f84771d9643a99fa7820f0beaf5621"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-x86_64-apple-darwin.tar.xz"
+      sha256 "2aa21d54d76f068883561747a5ab1d07d3fe0bf5186d619213bba0c5532a2805"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.0/git-workon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a47d3fe61418b6264cf4c61bf3608a2e0bcf07617feb415289013dce31cdb5ea"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "4e6456f5a7d581a6e8759b7bf0ff9043d0ca1d647cfe26f7d8828fc1070f14e9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.0/git-workon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ce7bf044e1f4854014cb7cdb9026122e9d50efbcd5adbd9977836e2d03b05801"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "e67e685ec29b10c4620ada8654d6b5713038a1f169f06db51e360e70a4a09216"
     end
   end
   license "MIT"
