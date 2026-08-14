@@ -1,25 +1,25 @@
 class GitWorkon < Formula
   desc "Git plugin for managing worktrees"
   homepage "https://github.com/lettertwo/git-workon"
-  version "0.11.1"
+  version "0.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-aarch64-apple-darwin.tar.xz"
-      sha256 "0e2c526f533f9c07ef6bf8341ccfd70dba3f0371cf3a3b5b8ad0a649ff69d6de"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-aarch64-apple-darwin.tar.xz"
+      sha256 "ff178e60589b3416092652d5e64d24cd98dee13d588d01b1122b13a04fa09285"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-x86_64-apple-darwin.tar.xz"
-      sha256 "2aa21d54d76f068883561747a5ab1d07d3fe0bf5186d619213bba0c5532a2805"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-x86_64-apple-darwin.tar.xz"
+      sha256 "1d1f33521b6352db3ffe22636ac1a0770e3ccfc725ac87d25c31057622c06521"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "4e6456f5a7d581a6e8759b7bf0ff9043d0ca1d647cfe26f7d8828fc1070f14e9"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "438e5e1bc33cb9243bb1215c18a744ed463435a29e444f6be737e4044d2f9e84"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.11.1/git-workon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "e67e685ec29b10c4620ada8654d6b5713038a1f169f06db51e360e70a4a09216"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "953dcd71def83d513f5f765b6845cb56affc900edc776c8756693a12b5c41190"
     end
   end
   license "MIT"
@@ -47,10 +47,18 @@ class GitWorkon < Formula
   end
 
   def install
-    bin.install "git-workon" if OS.mac? && Hardware::CPU.arm?
-    bin.install "git-workon" if OS.mac? && Hardware::CPU.intel?
-    bin.install "git-workon" if OS.linux? && Hardware::CPU.arm?
-    bin.install "git-workon" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "git-workon"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "git-workon"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "git-workon"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "git-workon"
+    end
 
     install_binary_aliases!
     # Install man page and shell completions bundled in the release archive.
