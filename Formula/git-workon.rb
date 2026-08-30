@@ -1,25 +1,25 @@
 class GitWorkon < Formula
   desc "Git plugin for managing worktrees"
   homepage "https://github.com/lettertwo/git-workon"
-  version "0.12.0"
+  version "0.13.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-aarch64-apple-darwin.tar.xz"
-      sha256 "ff178e60589b3416092652d5e64d24cd98dee13d588d01b1122b13a04fa09285"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.13.0/git-workon-aarch64-apple-darwin.tar.xz"
+      sha256 "5b658822e837d16428fa6c700f22add1ef32fc569152ce2570d8799c15602bd6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-x86_64-apple-darwin.tar.xz"
-      sha256 "1d1f33521b6352db3ffe22636ac1a0770e3ccfc725ac87d25c31057622c06521"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.13.0/git-workon-x86_64-apple-darwin.tar.xz"
+      sha256 "3b8c5f18e96b3a944e7d642e882bf68343423fa0cd663517a8685ea5e7563ca6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "438e5e1bc33cb9243bb1215c18a744ed463435a29e444f6be737e4044d2f9e84"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.13.0/git-workon-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "babfe31a3ded2b92934481e392546480543ef7468a42eebb0f92e37ef3cb9676"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.12.0/git-workon-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "953dcd71def83d513f5f765b6845cb56affc900edc776c8756693a12b5c41190"
+      url "https://github.com/lettertwo/git-workon/releases/download/git-workon-v0.13.0/git-workon-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "2cf587ae93ac2da410b89fe0f7edbabb032013983ea583e3ea52ee3b8f1d0348"
     end
   end
   license "MIT"
